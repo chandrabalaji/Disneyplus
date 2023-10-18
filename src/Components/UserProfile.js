@@ -16,6 +16,7 @@ const UserProfile = ({ email, photo, name }) => {
     });
   };
 
+
   return (
     <div className="userProfile">
       <div className="userinfo">
