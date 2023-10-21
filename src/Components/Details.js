@@ -6,6 +6,7 @@ import db from "../firebase";
 import { getDoc, doc } from "firebase/firestore";
 import { AiOutlinePlus } from "react-icons/ai";
 import { AiFillCaretRight } from "react-icons/ai";
+import Footer from "./Footer";
 
 const Details = () => {
   const { id } = useParams();
@@ -26,9 +27,16 @@ const Details = () => {
           </div>
           <div className="title">
             <img src={moviedata.title} alt="" />
-            <p> {  moviedata.time ? moviedata.time: '2012 . 2h 39m .Tamil .U/A 13+'}</p>
+            <p>
+              {" "}
+              {moviedata.time
+                ? moviedata.time
+                : "2012 . 2h 39m .Tamil .U/A 13+"}
+            </p>
             <h2>
-              {moviedata.discerption ? moviedata.discerption : "kids | Animation | Fantacy"}
+              {moviedata.discerption
+                ? moviedata.discerption
+                : "kids | Animation | Fantacy"}
             </h2>
             <div className="subscribebutton">
               <button>
@@ -42,6 +50,7 @@ const Details = () => {
           </div>
         </div>
       }
+      <Footer />
     </container>
   );
 };

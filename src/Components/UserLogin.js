@@ -9,7 +9,6 @@ import {
   username,
   useremail,
   userphoto,
-  setsignout,
   setuserLogin,
 } from "../features/user/userSlice";
 import UserProfile from "./UserProfile";
@@ -19,9 +18,6 @@ const UserLogin = () => {
   const name = useSelector(username);
   const email = useSelector(useremail);
   const photo = useSelector(userphoto);
-
-
- 
 
   const handlesignin = () => {
     const auth = getAuth();
@@ -52,13 +48,20 @@ const UserLogin = () => {
     <div className="UserLogin">
       {!name ? (
         <>
-          <h1>login to Disney+ </h1>
-          <Link id="link" onClick={handlesignin}>
-            Login
-          </Link>
+          <div className="background"></div>
+          <div className="login-set">
+            <div className="content-login">
+              <img src="/images/cta-logo-one.svg" alt="" />
+              <h1>login to Disney+ </h1>
+              <Link id="link" onClick={handlesignin}>
+                Login
+              </Link>
+              <img src="/images/cta-logo-two.png" alt="" />
+            </div>
+          </div>
         </>
       ) : (
-        <UserProfile email={email} name={name} photo={photo}  />
+        <UserProfile email={email} name={name} photo={photo} />
       )}
     </div>
   );

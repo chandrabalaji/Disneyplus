@@ -19,12 +19,13 @@ const UserProfile = ({ email, photo, name }) => {
 
   return (
     <div className="userProfile">
+      <img src="/images/profile-bg.jpg" alt="" />
       <div className="userinfo">
         <div>
           <img src={photo} alt="" />
           <h2>{email}</h2>
-          <p>{name}</p>
-          <h3>Subscribe to enjoy Disney+</h3>
+          <p>Hello! {name}</p>
+          <h3>Subscribe to enjoy Disneyplus</h3>
           <button onClick={handlesignout} className="userbutton">SignOut</button>
         </div>
         <div>

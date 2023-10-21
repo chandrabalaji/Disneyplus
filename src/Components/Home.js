@@ -11,6 +11,7 @@ import StarVijay from "./StarVijay";
 import Bestkids from "./Bestkids";
 import Old from "./Old";
 import Viewers from "./Viewers";
+import Footer from "./Footer";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -37,6 +38,7 @@ const Home = () => {
 
   return (
     <main>
+     
       {/* <ImageSlide /> */}
       <Recommended />
       <LatestReleases />
@@ -44,6 +46,8 @@ const Home = () => {
       <Bestkids />
       <Viewers />
       <Old />
+      <Footer />
+
     </main>
   );
 };

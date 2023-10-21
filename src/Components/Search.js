@@ -4,6 +4,7 @@ import "../App.css";
 import { useSelector } from "react-redux";
 import { allmovies } from "../features/movies/movieSlice";
 import { BsSearch } from "react-icons/bs";
+import Footer from "./Footer";
 
 const Search = () => {
   let movies = useSelector(allmovies);
@@ -55,6 +56,7 @@ const Search = () => {
               </div>
             ))}
       </div>
+      <Footer /> 
     </section>
   );
 };
