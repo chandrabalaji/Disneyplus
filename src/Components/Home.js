@@ -17,28 +17,30 @@ const Home = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    let colRef = collection(db, "TamilMovies");
-    let movie = [];
+    const data = async () => {
+      let colRef = await collection(db, "TamilMovies");
+      let movie = [];
 
-    getDocs(colRef)
-      .then((snapshot) => {
-        snapshot.docs.forEach((doc) => {
-          movie = [...movie, { id: doc.id, ...doc.data() }];
+      getDocs(colRef)
+        .then((snapshot) => {
+          snapshot.docs.forEach((doc) => {
+            movie = [...movie, { id: doc.id, ...doc.data() }];
+          });
+          dispatch(
+            setmovies({
+              allmovies: movie,
+            })
+          );
+        })
+        .catch((err) => {
+          console.log(err.message);
         });
-        dispatch(
-          setmovies({
-            allmovies:movie,
-          })
-        );
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
+    };
+    data();
   }, []);
 
   return (
     <main>
-     
       <ImageSlide />
       <Recommended />
       <LatestReleases />
@@ -47,7 +49,6 @@ const Home = () => {
       <Viewers />
       <Old />
       <Footer />
-
     </main>
   );
 };
