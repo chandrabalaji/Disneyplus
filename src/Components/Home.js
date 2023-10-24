@@ -39,7 +39,7 @@ const Home = () => {
   return (
     <main>
      
-      {/* <ImageSlide /> */}
+      <ImageSlide />
       <Recommended />
       <LatestReleases />
       <StarVijay />
