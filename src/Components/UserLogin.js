@@ -2,7 +2,7 @@ import "../App.css";
 import React from "react";
 import { Link } from "react-router-dom";
 import "../firebase";
-import { auth, provider } from "../firebase";
+import { provider } from "../firebase";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
 import {

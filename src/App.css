@@ -283,6 +283,7 @@
   cursor: pointer;
   &:hover {
     transform: scale(1.2);
+    z-index: 1;
   }
 }
 .content div img {
@@ -298,6 +299,7 @@
 
 .movielist {
   position: relative;
+ 
 }
 .movielist .title {
   position: absolute;
