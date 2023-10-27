@@ -1,3 +1,7 @@
+:root {
+  --smal-size: 12px;
+  --mid-size: 16px;
+}
 
 .background {
   background: url("/public/images/login-background.jpg");
@@ -162,15 +166,14 @@
   left: 100px;
   width: calc(100vw - 100px);
   height: 100%;
-
 }
-.userProfile > img{
+.userProfile > img {
   z-index: -1;
   position: absolute;
   object-fit: contain;
   width: 100%;
   height: auto;
-  opacity: .7;
+  opacity: 0.7;
 }
 .userinfo {
   padding-top: 20px;
@@ -260,30 +263,34 @@
   width: calc(100vw - 100px);
   height: auto;
   min-height: 150px;
-  overflow: scroll;
 
   box-sizing: border-box;
 }
+
 .containers::-webkit-scrollbar {
   display: none;
 }
 
 .content {
   display: flex;
-  min-height: 160px;
+  justify-content: center;
+  align-items: center;
+  min-height: 180px;
   height: 100%;
   width: 100%;
   gap: 15px;
+  overflow: scroll;
 }
 .content div {
   min-width: 250px;
-  height: 100%;
+  /* height: 100%; */
   max-width: 250px;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+ 
   &:hover {
     transform: scale(1.2);
-    z-index: 1;
+    z-index: 3;
   }
 }
 .content div img {
@@ -299,7 +306,6 @@
 
 .movielist {
   position: relative;
- 
 }
 .movielist .title {
   position: absolute;
@@ -406,7 +412,6 @@
   background-color: rgba(234, 232, 232, 0.059);
   transition: all 500ms ease-in-out 0s;
   border-radius: 4px;
- 
 
   &:hover {
     transform: scale(1.2);
@@ -419,9 +424,8 @@
   width: 100%;
   object-fit: contain;
   cursor: pointer;
-
 }
-.view > video{
+.view > video {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -527,10 +531,11 @@ footer {
   padding-left: 10px;
 }
 footer p {
+  font-size: var(--mid-size);
   opacity: 0.6;
 }
 footer h3 {
-  font-size: 13px;
+  font-size: var(--mid-size);
   opacity: 0.9;
 }
 footer .icon {
@@ -554,6 +559,41 @@ footer img {
 }
 
 @media (max-width: 400px) {
+  .slide {
+    min-height: 280px;
+  }
+  .overlay {
+    bottom: -10%;
+    z-index: 3;
+    left: 100px;
+    max-width: 220px;
+    min-width: 100px;
+  }
+  .overlay h1 {
+    font-size: 20px;
+  }
+  .overlay h5 {
+    font-weight: 500;
+  }
+  .overlay p {
+    display: none;
+  }
+  #btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+  #free-btn {
+    background: transparent;
+    color: #00c0f0;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+  }
+
   .containers,
   .footers {
     left: 0px;
@@ -563,17 +603,16 @@ footer img {
     width: 100%;
     padding-right: 10px;
   }
-  .nav {
-    max-width: 0px;
-  }
+ 
   .nav > img {
-    position: absolute;
+    /* disney logo  */
+    display: none;
   }
   .navmenu {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     width: 100vw;
-
     background-color: #000;
     height: auto;
     position: fixed;
@@ -581,5 +620,24 @@ footer img {
   }
   .navmenu h2 {
     display: none;
+  }
+  .viewers {
+    padding: 0 10px;
+    left: 0px;
+    min-width: 100vw;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  .footers {
+    left: 0px;
+    min-width: 100vw;
+    padding-bottom: 60px;
+  }
+  :root {
+    --smal-size: 10px;
+    --mid-size: 12px;
+  }
+  .footer-two img {
+    width: 150px;
   }
 }

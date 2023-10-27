@@ -9,9 +9,8 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <nav className="nav">
-      {/* <div> */}
       <img src="/images/logo.svg" alt="Disney+" />
-      {/* </div> */}
+
       <ul className="navmenu">
         <Link to="/UserLogin">
           <CgProfile />

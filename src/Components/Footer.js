@@ -35,7 +35,7 @@ const Footer = () => {
         &copy; {new Date().getFullYear()} <p>all rights reserved.</p>
         <p>terms of use privacy policy FAQ</p>
         </div>
-        <img src="./images/googleplaystore.png"  alt="" />
+        <img src="./images/googleplaystore.png"  alt=""  />
       </div>
     </footer>
   );

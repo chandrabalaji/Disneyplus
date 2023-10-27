@@ -16,45 +16,75 @@ const ImageSlide = () => {
 
   return (
     <main>
-      <Slider {...setting} >
+      <Slider {...setting}>
         <div className="slide">
-          <video type="video/mp4" className="video" autoPlay muted loop playsInline>
+          <video
+            type="video/mp4"
+            className="video"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
             <source src="/images/Bigg_boss.mp4" type="video/mp4" />
           </video>
           <div className="overlay">
             <h1>BIGG BOSS 7</h1>
             <p>{`${2023} . ${"Tamil"}  ${"U/16"} `}</p>
             <p>one of the most antipulated gaming show is back get ready </p>
+             <h5>Reality Show | Entertainment</h5>
             <div className="button">
-              <button>Watch For Free</button>
+            <button  id="btn">
+                Watch <span id='free-btn'>Free</span>
+              </button>
               <AiOutlinePlus />
             </div>
           </div>
         </div>
         <div className="slide">
-          <video type="video/mp4" className="video" autoPlay muted loop playsInline>
+          <video
+            type="video/mp4"
+            className="video"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
             <source src="/images/Ready_Steady.mp4" type="video/mp4" />
           </video>
           <div className="overlay">
             <h1>Ready Steady po </h1>
             <p>{`${2023} . ${"Tamil"}  ${"U/16"} `}</p>
             <p>one of the most antipulated gaming show is back get ready </p>
+            <h5>Reality Show | Entertainment</h5>
             <div className="button">
-              <button>Watch For Free</button>
+              <button  id="btn">
+                Watch <span id='free-btn'>Free</span>
+              </button>
               <AiOutlinePlus />
             </div>
           </div>
         </div>
         <div className="slide">
-          <video type="video/mp4" className="video" autoPlay muted loop playsInline>
-            <source src='/images/startMusic.mp4' type="video/mp4" />
+          <video
+            type="video/mp4"
+            className="video"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src="/images/startMusic.mp4" type="video/mp4" />
           </video>
           <div className="overlay">
             <h1>Start Music 4</h1>
             <p>{`${2023} . ${"Tamil"}   ${"U/16"} `}</p>
             <p>one of the most antipulated gaming show is back get ready </p>
+            <h5>Reality Show | Entertainment</h5>
             <div className="button">
-              <button>Watch For Free</button>
+            <button id="btn">
+                Watch <span id='free-btn'>Free</span>
+              </button>
               <AiOutlinePlus />
             </div>
           </div>
