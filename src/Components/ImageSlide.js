@@ -47,7 +47,7 @@ const ImageSlide = () => {
         </div>
         <div className="slide">
           <video type="video/mp4" className="video" autoPlay muted loop playsInline>
-            <source src='/images/Ready_Steady.mp4' type="video/mp4" />
+            <source src='/images/startMusic.mp4' type="video/mp4" />
           </video>
           <div className="overlay">
             <h1>Start Music 4</h1>

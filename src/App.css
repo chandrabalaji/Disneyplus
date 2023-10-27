@@ -406,20 +406,7 @@
   background-color: rgba(234, 232, 232, 0.059);
   transition: all 500ms ease-in-out 0s;
   border-radius: 4px;
-  > img {
-    width: 100%;
-    object-fit: contain;
-    cursor: pointer;
-  }
-
-  > video {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0px;
-    z-index: -1;
-    opacity: 0;
-  }
+ 
 
   &:hover {
     transform: scale(1.2);
@@ -428,7 +415,20 @@
     }
   }
 }
+.view > img {
+  width: 100%;
+  object-fit: contain;
+  cursor: pointer;
 
+}
+.view > video{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  z-index: -1;
+  opacity: 0;
+}
 /* search page  */
 
 .search {
