@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { AiOutlinePlus } from "react-icons/ai";
+import { AiFillCaretRight } from "react-icons/ai";
 
 const ImageSlide = () => {
   let setting = {
@@ -29,15 +30,25 @@ const ImageSlide = () => {
             <source src="/images/Bigg_boss.mp4" type="video/mp4" />
           </video>
           <div className="overlay">
-            <h1>BIGG BOSS 7</h1>
-            <p>{`${2023} . ${"Tamil"}  ${"U/16"} `}</p>
-            <p>one of the most antipulated gaming show is back get ready </p>
-             <h5>Reality Show | Entertainment</h5>
+            <h1>
+              <img
+                src="https://img10.hotstar.com/image/upload/f_auto,h_136/sources/r1/cms/prod/4031/1604031-t-3d7aa17822a9"
+                alt=""
+              />
+            </h1>
+            <h3>{`${2023} . ${"Tamil"}  ${"U/16"} `}</h3>
+            <p className="overlay-para">
+              one of the most antipulated gaming show is back get ready{" "}
+            </p>
+            <h5>Reality Show | Entertainment</h5>
             <div className="button">
-            <button  id="btn">
-                Watch <span id='free-btn'>Free</span>
+              <button id="btn">
+                <AiFillCaretRight />
+                Watch <span id="free-btn"> Now</span>
               </button>
-              <AiOutlinePlus />
+              <div className="slick-plus">
+                <AiOutlinePlus />
+              </div>
             </div>
           </div>
         </div>
@@ -53,15 +64,26 @@ const ImageSlide = () => {
             <source src="/images/Ready_Steady.mp4" type="video/mp4" />
           </video>
           <div className="overlay">
-            <h1>Ready Steady po </h1>
-            <p>{`${2023} . ${"Tamil"}  ${"U/16"} `}</p>
-            <p>one of the most antipulated gaming show is back get ready </p>
+            <h1>
+              {" "}
+              <img
+                src="https://img10.hotstar.com/image/upload/f_auto,h_136/sources/r1/cms/prod/2885/1592885-t-a57e7108dc55"
+                alt=""
+              />{" "}
+            </h1>
+            <h3>{`${2023} . ${"Tamil"}  ${"U/16"} `}</h3>
+            <p className="overlay-para">
+              one of the most antipulated gaming show is back get ready{" "}
+            </p>
             <h5>Reality Show | Entertainment</h5>
             <div className="button">
-              <button  id="btn">
-                Watch <span id='free-btn'>Free</span>
+              <button id="btn">
+                <AiFillCaretRight />
+                Watch <span id="free-btn"> Now</span>
               </button>
-              <AiOutlinePlus />
+              <div className="slick-plus">
+                <AiOutlinePlus />
+              </div>
             </div>
           </div>
         </div>
@@ -77,15 +99,25 @@ const ImageSlide = () => {
             <source src="/images/startMusic.mp4" type="video/mp4" />
           </video>
           <div className="overlay">
-            <h1>Start Music 4</h1>
-            <p>{`${2023} . ${"Tamil"}   ${"U/16"} `}</p>
-            <p>one of the most antipulated gaming show is back get ready </p>
+            <h1>
+              <img
+                src="https://img10.hotstar.com/image/upload/f_auto,h_136/sources/r1/cms/prod/4515/1494515-t-66b3e61eaeeb"
+                alt=""
+              />
+            </h1>
+            <h3>{`${2023} . ${"Tamil"}   ${"U/16"} `}</h3>
+            <p className="overlay-para">
+              one of the most antipulated gaming show is back get ready
+            </p>
             <h5>Reality Show | Entertainment</h5>
             <div className="button">
-            <button id="btn">
-                Watch <span id='free-btn'>Free</span>
+              <button id="btn">
+                <AiFillCaretRight />
+                Watch <span id="free-btn"> Now</span>
               </button>
-              <AiOutlinePlus />
+              <div className="slick-plus">
+                <AiOutlinePlus />
+              </div>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 :root {
   --smal-size: 12px;
-  --mid-size: 16px;
+  --mid-size: 17px;
 }
 
 .background {
@@ -150,14 +150,6 @@
   gap: 10px;
 }
 
-.navmenu a span {
-  color: rgb(240, 249, 249);
-  font-size: 13px;
-  letter-spacing: 1.4px;
-  padding: 2px 0;
-  position: relative;
-}
-
 /* .Userprofile */
 
 .userProfile {
@@ -218,25 +210,32 @@
 .slide video {
   position: relative;
   width: 100vw;
-  height: auto;
+  height: 80vh;
   z-index: 0;
+  opacity: 0.8;
+  object-fit: cover;
 }
 .overlay {
   position: absolute;
   z-index: 1;
   color: white;
-  bottom: 30%;
+  bottom: 20%;
   left: 140px;
-  max-width: 250px;
+  max-width: 260px;
   min-width: 200px;
 }
 
+.overlay-para {
+  font-size: 1.2em;
+  opacity: 0.7;
+}
 .overlay button {
   cursor: pointer;
   background-color: rgba(135, 155, 156, 0.5);
   color: #fff;
-  font-size: 1.5em;
-  padding: 3px 15px;
+  font-size: 1.3em;
+  font-weight: 500;
+  padding: 10px 55px;
   outline: none;
   border: none;
   border-radius: 5px;
@@ -246,40 +245,50 @@
     background-color: rgba(89, 96, 97, 0.7);
   }
 }
-
-.button :last-child {
-  background-color: rgba(135, 155, 156, 0.5);
-  padding: 5px;
-  border-radius: 4px;
-  position: relative;
-  top: 8px;
-  font-size: 29px;
-  margin-left: 10px;
-  cursor: pointer;
+.button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
+#btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  gap: 10px;
+}
+
+.slick-plus {
+  font-size: 1.3em;
+  background-color: rgba(135, 155, 156, 0.5);
+  padding: 10px 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
 .containers {
   position: relative;
   left: 100px;
   width: calc(100vw - 100px);
   height: auto;
   min-height: 150px;
-
   box-sizing: border-box;
 }
-
-.containers::-webkit-scrollbar {
-  display: none;
+.containers h2 {
+  font-size: var(--mid-size);
 }
-
 .content {
   display: flex;
-  justify-content: center;
   align-items: center;
   min-height: 180px;
   height: 100%;
-  width: 100%;
+  width: calc(100vw - 100px);
   gap: 15px;
   overflow: scroll;
+}
+.content::-webkit-scrollbar {
+  display: none;
 }
 .content div {
   min-width: 250px;
@@ -287,7 +296,7 @@
   max-width: 250px;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
- 
+
   &:hover {
     transform: scale(1.2);
     z-index: 3;
@@ -341,15 +350,14 @@
   height: auto;
   bottom: 20%;
   padding: 20px;
-  > img {
-    max-width: 30vw;
-  }
 
   @media (min-width: 900px) {
     bottom: 30%;
   }
 }
-
+.moviedetails > .title > img {
+  max-width: 30vw;
+}
 .moviedetails > .title > div > button {
   width: 35vw;
   max-width: 350px;
@@ -438,7 +446,7 @@
 .search {
   position: relative;
   left: 100px;
-  width: calc(100vw - 100px);
+  width: calc(100vw - 200px);
   height: 100vh;
 
   > .input {
@@ -469,22 +477,26 @@
 }
 
 .searchmovielist {
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 10px;
   padding: 20px 30px;
-  > .datalist {
-    position: relative;
-    max-width: 250px;
-    min-height: 250px;
-  }
 
   @media (max-width: 720px) {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    .datalist {
+      position: relative;
+      max-width: 270px;
+      min-height: 210px;
+    }
+    width: 400px;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }
-
+.searchmovielist > .datalist {
+  position: relative;
+  max-width: 250px;
+  min-height: 250px;
+}
 .searchmovielist > .datalist .img {
   width: 100%;
   height: 100%;
@@ -562,15 +574,27 @@ footer img {
   .slide {
     min-height: 280px;
   }
+  .slick-plus {
+    display: none;
+  }
+  .slide video {
+    height: auto;
+  }
+
   .overlay {
     bottom: -10%;
     z-index: 3;
     left: 100px;
     max-width: 220px;
     min-width: 100px;
+    gap: 10px;
   }
   .overlay h1 {
-    font-size: 20px;
+    max-width: 100px;
+  }
+  .overlay img {
+    width: 100%;
+    object-fit: contain;
   }
   .overlay h5 {
     font-weight: 500;
@@ -593,7 +617,46 @@ footer img {
     margin-bottom: 10px;
     font-size: 1.1em;
   }
+  .moviedetails {
+    left: 0px;
+    width: 100vw;
+  }
+  .moviedetails > .title {
+    position: static;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .moviedetails > .title > div > button {
+    width: 100%;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 15px 45px;
+    max-width: 290px;
+  }
+
+  .subscribebutton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .subscribebutton > button > :first-child {
+    font-weight: 400;
+    font-size: 1.73em;
+  }
+  .content {
+    width: 100vw;
+  }
+
+  .search {
+    width: 100vw;
+    left: 0px;
+  }
   .containers,
   .footers {
     left: 0px;
@@ -603,7 +666,7 @@ footer img {
     width: 100%;
     padding-right: 10px;
   }
- 
+
   .nav > img {
     /* disney logo  */
     display: none;
@@ -621,6 +684,7 @@ footer img {
   .navmenu h2 {
     display: none;
   }
+
   .viewers {
     padding: 0 10px;
     left: 0px;
@@ -635,7 +699,7 @@ footer img {
   }
   :root {
     --smal-size: 10px;
-    --mid-size: 12px;
+    --mid-size: 14px;
   }
   .footer-two img {
     width: 150px;
