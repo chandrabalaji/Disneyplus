@@ -41,10 +41,15 @@ const ImageSlide = () => {
               one of the most antipulated gaming show is back get ready{" "}
             </p>
             <h5>Reality Show | Entertainment</h5>
+            <h5 id="phone-dis"> {`${2023} | ${"Tamil"}`} | Reality | Celebrities </h5>
             <div className="button">
               <button id="btn">
-                <AiFillCaretRight />
-                Watch <span id="free-btn"> Now</span>
+                <div id="play-btn">
+                  <AiFillCaretRight />
+                </div>
+                <div>
+                  Watch <span id="free-btn"> Now</span>
+                </div>
               </button>
               <div className="slick-plus">
                 <AiOutlinePlus />
@@ -76,10 +81,15 @@ const ImageSlide = () => {
               one of the most antipulated gaming show is back get ready{" "}
             </p>
             <h5>Reality Show | Entertainment</h5>
+            <h5 id="phone-dis"> {`${2023} season2 | ${"Tamil"}`} | Reality | Competation </h5>
             <div className="button">
-              <button id="btn">
-                <AiFillCaretRight />
-                Watch <span id="free-btn"> Now</span>
+            <button id="btn">
+                <div id="play-btn">
+                  <AiFillCaretRight />
+                </div>
+                <div>
+                  Watch <span id="free-btn"> Now</span>
+                </div>
               </button>
               <div className="slick-plus">
                 <AiOutlinePlus />
@@ -109,11 +119,16 @@ const ImageSlide = () => {
             <p className="overlay-para">
               one of the most antipulated gaming show is back get ready
             </p>
-            <h5>Reality Show | Entertainment</h5>
+            <h5>Reality| Entertainment</h5>
+            <h5 id="phone-dis"> {`${2023} | ${"Tamil"}`} | Reality |Musicals| Celebrities </h5>
             <div className="button">
-              <button id="btn">
-                <AiFillCaretRight />
-                Watch <span id="free-btn"> Now</span>
+            <button id="btn">
+                <div id="play-btn">
+                  <AiFillCaretRight />
+                </div>
+                <div>
+                  Watch <span id="free-btn"> Now</span>
+                </div>
               </button>
               <div className="slick-plus">
                 <AiOutlinePlus />
