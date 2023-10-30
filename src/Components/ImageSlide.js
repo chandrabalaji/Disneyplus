@@ -36,7 +36,7 @@ const ImageSlide = () => {
                 alt=""
               />
             </h1>
-            <h3>{`${2023} . ${"Tamil"}  ${"U/16"} `}</h3>
+            <h3>{`${2023} | ${"Tamil"}  ${"U/16"} `}</h3>
             <p className="overlay-para">
               one of the most antipulated gaming show is back get ready{" "}
             </p>
@@ -76,7 +76,7 @@ const ImageSlide = () => {
                 alt=""
               />{" "}
             </h1>
-            <h3>{`${2023} . ${"Tamil"}  ${"U/16"} `}</h3>
+            <h3>{`${2023} | ${"Tamil"}  ${"U/16"} `}</h3>
             <p className="overlay-para">
               one of the most antipulated gaming show is back get ready{" "}
             </p>
@@ -115,7 +115,7 @@ const ImageSlide = () => {
                 alt=""
               />
             </h1>
-            <h3>{`${2023} . ${"Tamil"}   ${"U/16"} `}</h3>
+            <h3>{`${2023} | ${"Tamil"}   ${"U/16"} `}</h3>
             <p className="overlay-para">
               one of the most antipulated gaming show is back get ready
             </p>
